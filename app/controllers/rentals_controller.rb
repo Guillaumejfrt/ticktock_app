@@ -16,7 +16,7 @@ class RentalsController < ApplicationController
     if @rental.save
       redirect_to watch_rental_path(@watch, @rental)
     else
-      render 'watches/show'
+      render "watches/show"
     end
   end
 

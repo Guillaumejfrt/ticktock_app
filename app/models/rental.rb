@@ -26,7 +26,7 @@ class Rental < ApplicationRecord
 
   def end_date_cannot_precede_start_date
     if end_date < start_date
-      errors.add(:end_date, "can't precede rental start date")
+      errors.add(:end_date, "End date cannot precede start date.")
     end
   end
 end

@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: watches
+#
+#  id          :integer          not null, primary key
+#  brand       :string
+#  price       :integer
+#  gender      :string
+#  mechanism   :string
+#  description :string
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+# Indexes
+#
+#  index_watches_on_user_id  (user_id)
+#
+
 class Watch < ApplicationRecord
   GENDERS = %w(woman man mixt)
   MECHANISMS = %w(automatic manual)

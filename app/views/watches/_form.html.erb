@@ -1,0 +1,7 @@
+<%= simple_form_for ( @watch ) do |f| %>
+  <%= f.input :brand, collection: Watch::BRANDS  %>
+  <%= f.input :gender, collection: Watch::GENDERS %>
+  <%= f.input :mechanism, collection: Watch::MECHANISMS %>
+  <%= f.input :price %>
+  <%= f.submit "Go", class: "btn btn-primary" %>
+<% end %>

@@ -1,1 +1,32 @@
 // Your footer style
+footer {
+  font-size: 12px;
+  padding: 31px 0;
+  background-color: #000000;
+  height: 80px;
+  width: 100%;
+  color: white;
+  margin-top: 20px;
+}
+
+footer .col-sm-2 {
+  color: white;
+}
+
+footer a {
+  color: white;
+  padding: 5px;
+  margin: 5px;
+ }
+
+footer a:hover {
+  color: #e7e7e7;
+}
+
+footer .copy-right {
+  float: left;
+}
+
+footer .socials {
+  text-align: right;
+}

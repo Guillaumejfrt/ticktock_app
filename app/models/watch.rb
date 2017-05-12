@@ -13,4 +13,5 @@ class Watch < ApplicationRecord
   validates :brand, inclusion: { in: BRANDS}
   validates :gender, inclusion: { in: GENDERS }
   validates :mechanism, inclusion: { in: MECHANISMS }
+  validates :price, :numericality => true
 end

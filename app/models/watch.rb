@@ -6,9 +6,7 @@ class Watch < ApplicationRecord
   belongs_to :user
   has_many :rentals, dependent: :nullify
   has_many :photos, dependent: :nullify
-  # has_attachment :photos, accept: [:jpg, :png], maximum: 5
 
-  # validates :photos, presence: true
   validates :brand, :price, :gender, :mechanism, presence: true
   validates :brand, inclusion: { in: BRANDS}
   validates :gender, inclusion: { in: GENDERS }

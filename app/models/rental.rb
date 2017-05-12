@@ -21,7 +21,7 @@ class Rental < ApplicationRecord
   belongs_to :user
   belongs_to :watch
 
-  validates :start_date, :end_date, presence: true
+  validates :start_date, :end_date, :rent_price, presence: true
   validate :end_date_cannot_precede_start_date
 
   def end_date_cannot_precede_start_date

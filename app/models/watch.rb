@@ -1,7 +1,7 @@
 class Watch < ApplicationRecord
   GENDERS = %w(woman man)
   MECHANISMS = %w(automatic manual)
-  BRANDS = %w(Accurist ADINA-Watches Adriatica A.L.B-Atelier Le-Brézéguet Alpina-Watches American Waltham-Watch-Company Andrea-Strehler Anonimo Ansonia-Clock-Company)
+  BRANDS = %w(Rolex Accurist ADINA-Watches Adriatica A.L.B-Atelier Le-Brézéguet Alpina-Watches American Waltham-Watch-Company Andrea-Strehler Anonimo Ansonia-Clock-Company)
 
   belongs_to :user
   has_many :rentals, dependent: :nullify

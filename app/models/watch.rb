@@ -1,5 +1,5 @@
 class Watch < ApplicationRecord
-  GENDERS = %w(woman man)
+  GENDERS = %w(woman man mixt)
   MECHANISMS = %w(automatic manual)
   BRANDS = %w(Rolex Accurist ADINA-Watches Adriatica A.L.B-Atelier Le-Brézéguet Alpina-Watches American Waltham-Watch-Company Andrea-Strehler Anonimo Ansonia-Clock-Company)
 

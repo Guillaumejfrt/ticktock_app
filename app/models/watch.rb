@@ -5,7 +5,6 @@ class Watch < ApplicationRecord
 
   belongs_to :user
   has_many :rentals, dependent: :nullify
-  has_many :photos, dependent: :nullify
 
   validates :brand, :price, :gender, :mechanism, presence: true
   validates :brand, inclusion: { in: BRANDS}

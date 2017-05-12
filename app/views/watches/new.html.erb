@@ -1,2 +1,8 @@
-<h1>Watches#new</h1>
-<p>Find me in app/views/watches/new.html.erb</p>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>Add a watch</h1>
+    <%= render 'form' %>
+  </div>
+</div>
+<hr>
+<%= link_to "home", watches_path, class: "btn btn-info" %>

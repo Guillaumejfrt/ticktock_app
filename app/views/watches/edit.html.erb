@@ -1,2 +1,8 @@
-<h1>Watches#edit</h1>
-<p>Find me in app/views/watches/edit.html.erb</p>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>Edit your watch</h1>
+    <%= render 'form' %>
+  </div>
+</div>
+<hr>
+<%= link_to "home", watches_path, class: "btn btn-info" %>

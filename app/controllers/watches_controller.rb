@@ -1,5 +1,5 @@
 class WatchesController < ApplicationController
-  before_action :find_watch, only: [ :show ]
+  before_action :find_watch, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @watches = Watch.all
@@ -14,6 +14,7 @@ class WatchesController < ApplicationController
 
   def create
     @watch = Watch.new(watch_params)
+    @watch.user = current_user
     if @watch.save
       redirect_to watch_path(@watch)
     else
@@ -32,10 +33,10 @@ class WatchesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @watch.destroy
-  #   redirect_to pages#dashboard
-  # end
+  def destroy
+    @watch.destroy
+    redirect_to watches_path
+  end
 
   private
 

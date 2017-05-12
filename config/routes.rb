@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
 
   resources :watches
+  resources :users, only: [:show, :edit, :update]
 
 end

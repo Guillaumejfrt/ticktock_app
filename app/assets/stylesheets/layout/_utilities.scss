@@ -30,11 +30,10 @@ body, html{
 }
 
 .wrapper {
-  margin-top: 50px;
+  margin-top: 35px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 50px;
-  // margin: 100px auto;
+  margin-bottom: 150px;
   width: 460px;
   padding-left: 30px;
   padding-right: 30px;
@@ -59,9 +58,17 @@ body, html{
 
 .img-bg {
   background-image: url(wbg.jpg);
-  margin: 0 auto;
+  margin-bottom: auto;
   background-size: cover;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
+.banner {
+  background-image: url(index.jpg);
+  margin: 0 auto;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  margin-bottom:0 auto;
+}

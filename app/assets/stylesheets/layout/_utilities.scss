@@ -35,8 +35,8 @@ body, html{
   margin-left: auto;
   margin-bottom: 150px;
   width: 460px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 15px;
   padding-bottom: 30px;
   text-align: center;
@@ -53,7 +53,11 @@ body, html{
   font-size: 22px;
   letter-spacing: 0.2em;
   font-weight: bold;
+}
 
+.wrapper a {
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .img-bg {
@@ -66,9 +70,27 @@ body, html{
 
 .banner {
   background-image: url(index.jpg);
-  margin: 0 auto;
   background-size: cover;
   padding-top: 30px;
   padding-bottom: 0px;
-  margin-bottom:0 auto;
+  margin-bottom:0;
+}
+
+.form-inputs {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.form-group.email.optional.user_email {
+  margin-bottom: 30px;
+}
+
+.control-label.password.optional {
+
+}
+
+.form-actions {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

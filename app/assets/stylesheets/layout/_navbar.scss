@@ -1,13 +1,33 @@
 /* Main class */
+
+.logo-container {
+  // margin: 0 auto;
+  padding: none;
+}
+.logo-text-1 {
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+.logo-text-2 {
+  font-weight: bold;
+}
+
+.logo-text-3 {
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   transition: all 0.3s ease;
   display: flex;
-  height: 70px;
+  height: 100px;
   padding: 0px 30px;
   align-items: center;
-  justify-content: space-between;
+
 }
 
 /* Optional class to fix the navbar on top */
@@ -21,31 +41,45 @@
 
 /* Navbar logo */
 .navbar-wagon-brand img {
-  width: 50px;
+  width: 24px;
+}
+
+a.navbar-wagon-brand hover {
+  border: none;
+  text-decoration: none;
 }
 
 /* Navbar right section (with form, links, button) */
 .navbar-wagon-right {
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: space-between;
 }
 
 /* Navbar item */
 .navbar-wagon-item {
-  flex: 0 1 auto;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+
   cursor: pointer;
   padding: 0 20px;
 }
 
 /* Navbar standard link */
 .navbar-wagon-link {
+  display: flex;
+  position: absolute;
+  right: 70px;
+  top: 40px;
   color: #616668;
   font-size: 14px;
 }
+
 .navbar-wagon-link:hover {
-  color: #da552f;
   text-decoration: none;
+  color: black;
 }
 
 /* Navbar right button */
@@ -102,8 +136,10 @@
 /* Navbar dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
+  margin-right: 100px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
+
 }
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
@@ -129,3 +165,5 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+

@@ -3,6 +3,7 @@
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "tic-tock-logo.jpg" %>
   <% end %>
+  <%= link_to "Sign up", new_registration_path(resource_name) %><br />
 
   <!-- Right Navigation -->
   <% if user_signed_in? %>

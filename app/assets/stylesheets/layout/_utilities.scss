@@ -62,19 +62,11 @@ body, html{
 }
 
 .img-bg {
-  background-image: url(wbg.jpg);
+  background-image: image-url("wbg.jpg");
   margin-bottom: auto;
   background-size: cover;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.banner {
-  background-image: url(index.jpg);
-  background-size: cover;
-  padding-top: 30px;
-  padding-bottom: 0px;
-  margin-bottom:0;
 }
 
 .form-inputs {

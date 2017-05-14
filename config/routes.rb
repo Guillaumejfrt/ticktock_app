@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
-
-  get 'pages/profile'
-
-  devise_for :users
-  root 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
   mount Attachinary::Engine => "/attachinary"
+  devise_for :users
 
-  resources :watches
+  root 'pages#home'
+  resources :watches do
+    resources :rentals, only: [ :show, :create ]
+  end
   resources :users, only: [:show, :edit, :update]
-
+  get 'pages/profile'
 end

@@ -1,55 +1,58 @@
 <div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "tic-tock-logo.jpg" %>
-  <% end %>
-
+  <div class="logo-container">
+    <span class="logo-text-1"> <font size="4">T</font>ICK'</span>
+    <span class="logo-text-2"> <font size="4">T</font></span>
+    <!-- Logo -->
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "logo-ok.jpg" %>
+    <% end %>
+    <span class="logo-text-3">CK</span>
+  </div>
   <!-- Right Navigation -->
   <% if user_signed_in? %>
-
-    <div class="navbar-wagon-right hidden-xs hidden-sm">
-      <!-- Add a watch -->
-      <%= link_to "Add a watch", new_watch_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <!-- Notification -->
-      <%# link_to "", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <!-- <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
-        </div> -->
-      <%# end %>
-
-      <!-- Profile picture and dropdown -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="navbar-wagon-item hidden-md hidden-lg">
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <!-- Add a watch -->
+    <%= link_to "Add a watch", new_watch_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <!-- Notification -->
+    <%# link_to "", class: "navbar-wagon-item navbar-wagon-link" do %>
+    <!-- <div class="badge-container">
+      <i class="fa fa-envelope-o"></i>
+      <div class="badge badge-blue">3</div>
+    </div> -->
+    <%# end %>
+    <!-- Profile picture and dropdown -->
+    <div class="navbar-wagon-item">
       <div class="dropdown">
-        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>
-            <%= link_to "Add a watch", new_watch_path %>
-          </li>
-          <li>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+            <% end %>
           </li>
         </ul>
       </div>
     </div>
+  </div>
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li>
+          <%= link_to "Add a watch", new_watch_path %>
+        </li>
+        <li>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+        </li>
+      </ul>
+    </div>
+  </div>
   <% else %>
+  <div class="navbar-wagon-right">
+    <!-- Sign-up text link -->
+    <%= link_to t(".sign_up", default: "Signup"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <!-- Login text link -->
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-  <% end %>
-  <!-- Button (call-to-action) -->
-  <%# link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <% end %>
+  </div>
 </div>
-

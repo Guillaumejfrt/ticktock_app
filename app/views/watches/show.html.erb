@@ -1,15 +1,22 @@
-<div class="row">
-  <div class="col-md-9 col-xs-12">
-    <div>
-      <h2><%= @watch.brand %></h2>
-      <p><%= @watch.gender %></p>
-      <p><%= @watch.mechanism %></p>
-      <p><%= @watch.description %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 col-xs-12">
+      <div>
+        <h2><%= @watch.brand %></h2>
+        <p><%= @watch.gender %></p>
+        <p><%= @watch.mechanism %></p>
+        <p><%= @watch.description %></p>
+      </div>
     </div>
-  </div>
-  <div class="col-md-3 col-xs-12">
-    <div>
-      <h3><%= @watch.price %>€</h3><span>/hour</span>
+    <div class="col-md-3 col-xs-12">
+      <div>
+        <h3><%= @watch.price %>€</h3><span>/hour</span>
+        <hr>
+      </div>
+      <div>
+        <%= render "rentals/rental_form" %>
+      </div>
     </div>
   </div>
 </div>
+

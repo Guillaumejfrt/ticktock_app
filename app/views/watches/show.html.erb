@@ -1,6 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-9 col-xs-12">
+    <div>
+      <% if @watch.photo? %>
+        <%= cl_image_tag @watch.photo.path, width: 300, height: 300, crop: :fill %>
+      <% end %>
+    </div>
       <div>
         <h2><%= @watch.brand %></h2>
         <p><%= @watch.gender %></p>

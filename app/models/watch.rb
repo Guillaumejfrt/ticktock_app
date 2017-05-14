@@ -24,10 +24,12 @@ class Watch < ApplicationRecord
 
   belongs_to :user
   has_many :rentals, dependent: :nullify
+  has_attachment :photo
 
   validates :brand, :price, :gender, :mechanism, presence: true
   validates :brand, inclusion: { in: BRANDS}
   validates :gender, inclusion: { in: GENDERS }
   validates :mechanism, inclusion: { in: MECHANISMS }
   validates :price, :numericality => true
+  validates :photo, presence: true
 end

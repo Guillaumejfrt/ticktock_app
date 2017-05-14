@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
-  before_action :get_user, only: [ :profile, :edit_profile ]
+  before_action :get_user, only: [ :profile, :edit_profile, :dashboard ]
 
   def home
   end
@@ -9,6 +9,9 @@ class PagesController < ApplicationController
   end
 
   def edit_profile
+  end
+
+  def dashboard
   end
 
   private

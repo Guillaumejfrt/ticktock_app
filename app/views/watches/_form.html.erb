@@ -3,7 +3,7 @@
   <%= f.input :gender, collection: Watch::GENDERS %>
   <%= f.input :mechanism, collection: Watch::MECHANISMS %>
   <%= f.input :price %>
-  <%= f.input :photo, as: :attachinary %>
+  <%= f.input :photos, as: :attachinary %>
   <%= f.input :description %>
   <%= f.submit "Go", class: "btn btn-primary" %>
 <% end %>

@@ -29,7 +29,7 @@ body, html{
   background-size: 100%;
 }
 
-.wrapper {
+.wrapper-sign {
   margin-top: 35px;
   margin-right: auto;
   margin-left: auto;
@@ -47,15 +47,15 @@ body, html{
   opacity: 0.9;
 }
 
-.wrapper h2 {
-  margin-top: 0px;
-  margin-bottom: 40px;
+.wrapper-sign h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
   font-size: 22px;
   letter-spacing: 0.2em;
   font-weight: bold;
 }
 
-.wrapper a {
+.wrapper-sign a {
   padding: 10px;
   margin-top: 10px;
 }

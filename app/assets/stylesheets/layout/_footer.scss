@@ -1,12 +1,17 @@
 // Your footer style
 footer {
+  display: flex;
   font-size: 12px;
   padding: 31px 0;
   background-color: #000000;
   height: 80px;
   width: 100%;
   color: white;
-  margin-top: 20px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+
+
 }
 
 footer .col-sm-2 {
@@ -29,4 +34,13 @@ footer .copy-right {
 
 footer .socials {
   text-align: right;
+}
+
+footer p {
+  text-align: center;
+}
+
+.container {
+  margin: 0;
+  width: 100%;
 }

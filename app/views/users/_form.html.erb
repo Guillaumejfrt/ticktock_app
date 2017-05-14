@@ -1,5 +1,6 @@
 <%= simple_form_for(@user) do |f| %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
-  <%= f.submit "update", class: "btn btn-primary" %>
+  <%= f.input :photo, as: :attachinary %>
+  <%= f.submit "Update profile", class: "btn btn-primary" %>
 <% end %>

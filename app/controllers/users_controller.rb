@@ -1,15 +1,18 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: : [ :show, :edit, :update]
+  before_action :find_user, only: [ :show, :edit, :update ]
+
   def show
-    @user = current_user
   end
 
   def edit
-  @user = current_user
   end
 
   def update
-    @user = User.new(user_params)
+    if @user = User.update(user_params)
+      redirect_to user_path(@user)
+    else
+      render :edit
+    end
   end
 
   private
@@ -19,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    require.(:user).permit(:first_name, :last_name)
+    params.require(:user).permit(:first_name, :last_name, :photo)
   end
 
 end

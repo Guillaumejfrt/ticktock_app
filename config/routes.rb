@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resources :rentals, only: [ :show, :create ]
   end
   resources :users, only: [:show, :edit, :update]
-  get 'pages/profile'
+  # get 'pages/profile', to: 'pages#profile'
 end

@@ -1,4 +1,13 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+      <h1>Edit my profile</h1>
+      <%= render "form" %>
+      <hr>
+      <%= link_to "Back to My profile", user_path(@user) %>
+    </div>
+  </div>
+</div>
 
-<%= render "form" %>
+
+

@@ -2,7 +2,7 @@
 * CSS code specific to home page
 * (margin/padding adjustments)
 * ------------------------------------- */
-.banner-background {
+.banner-bg-home {
   background-image: image-url("index.jpg");
   background-size: cover;
   padding: 200px;
@@ -33,4 +33,8 @@
   border-style:solid;
   background-color: white;
   opacity: 0.9;
+}
+
+.banner-bg-index{
+
 }

@@ -35,6 +35,73 @@
   opacity: 0.9;
 }
 
-.banner-bg-index{
+.banner-bg-index {
+  background-image: image-url("rolex.jpg");
+  background-size: cover;
+  padding: 200px;
+}
 
+
+.wrapper-form {
+  margin-top: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 150px;
+  width: 460px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-color: #bcbcbc;
+  border-width: 1px;
+  border-style:solid;
+  background-color: white;
+  opacity: 0.9;
+}
+
+.wrapper-form h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+}
+
+.wrapper-form a {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.banner-bg-index {
+  background-image: image-url("rolex-ok.jpg");
+  background-size: contain;
+}
+
+.form-inputs {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.form-group.email.optional.user_email {
+  margin-bottom: 30px;
+}
+
+.control-label.password.optional {
+
+}
+
+.form-actions {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #ccb94d;
+  text-decoration: none;
 }

@@ -1,0 +1,35 @@
+.form-inline {
+  padding: 5px;
+  background-color: none;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  border-radius: 1px;
+  font-size: 15px;
+}
+
+.final-price {
+  background-color: rgba( lightslategrey, 0.3);
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.final-price span {
+  font-variant: small-caps;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.wrapper-rent {
+  background-color: rgba( lightslategrey, 0.3);
+  padding: 13px;
+  border-radius: 3px;
+}
+
+.control-label {
+  font-variant: small-caps;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+}

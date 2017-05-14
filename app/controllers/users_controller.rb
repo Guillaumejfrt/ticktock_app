@@ -9,9 +9,9 @@ class UsersController < ApplicationController
 
   def update
     if @user = User.update(user_params)
-      redirect_to user_path(@user)
+      redirect_to pages_profile_path
     else
-      render :edit
+      render 'pages/edit_profile'
     end
   end
 

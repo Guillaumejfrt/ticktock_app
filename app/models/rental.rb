@@ -3,8 +3,8 @@
 # Table name: rentals
 #
 #  id         :integer          not null, primary key
-#  start_date :date
-#  end_date   :date
+#  start_date :datetime
+#  end_date   :datetime
 #  rent_price :integer
 #  user_id    :integer
 #  watch_id   :integer

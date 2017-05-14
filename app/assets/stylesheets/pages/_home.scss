@@ -4,11 +4,18 @@
  * ------------------------------------- */
 
 .banner {
+  background-image: image-url("index.jpg");
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  margin-bottom:0;
   text-align: center;
   padding-top: 150px;
   padding-bottom: 70px;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
 }
+
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;

@@ -1,29 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h1>My dashboard</h1>
+      <h2>Dashboard</h2>
+      <hr>
       <div>
-        <h3>My rentals</h3>
-        <hr>
-        <% @user.rentals.each do |rental| %>
-          <div>
-            <% rental.watch.photos.each do |photo| %>
-            <div>
-              <%= cl_image_tag photo.path, width: 100, height: 100, crop: :fill %>
-            </div>
-            <% end %>
-            <div>
-              <h4><strong><%= rental.watch.brand %></strong></h4>
-              <p><%= rental.start_date %></p>
-              <p><%= rental.end_date %></p>
-              <p><%= rental.rent_price %>€</p>
-            </div>
-          </div>
-        <% end %>
+        <h4>My watches</h4>
+        <h4>My rentals</h4>
       </div>
+      <hr>
       <div>
-        <h3>My watches</h3>
-        <hr>
+        <em><h4>My watches:</h4></em>
         <% @user.watches.each do |watch| %>
           <div>
             <% watch.photos.each do |photo| %>
@@ -32,10 +18,29 @@
             </div>
             <% end %>
             <div>
-              <h4><strong><%= watch.brand %></strong></h4>
+              <h5><strong><%= watch.brand %></strong></h5>
               <p><%= watch.gender %></p>
               <p><%= watch.mechanism %></p>
               <p><%= watch.description %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <hr>
+      <div>
+        <em><h4>My rentals:</h4></em>
+        <% @user.rentals.each do |rental| %>
+          <div>
+            <% rental.watch.photos.each do |photo| %>
+            <div>
+              <%= cl_image_tag photo.path, width: 100, height: 100, crop: :fill %>
+            </div>
+            <% end %>
+            <div>
+              <h5><strong><%= rental.watch.brand %></strong></h5>
+              <p><%= rental.start_date %></p>
+              <p><%= rental.end_date %></p>
+              <p><%= rental.rent_price %>€</p>
             </div>
           </div>
         <% end %>

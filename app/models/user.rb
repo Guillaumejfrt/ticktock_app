@@ -41,15 +41,17 @@ class User < ApplicationRecord
 
   has_many :watches
   has_many :rentals
+
+  devise :omniauthable, omniauth_providers: [:facebook]
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+        :recoverable, :rememberable, :trackable, :validatable
 
   has_attachment :photo
 
   private
 
   def normalize_name
-    first_name.capitalize!
-    last_name.capitalize!
+    first_name&.capitalize!
+    last_name&.capitalize!
   end
 end

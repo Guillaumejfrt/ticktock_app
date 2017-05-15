@@ -13,6 +13,7 @@
   background-color: rgba( lightslategrey, 0.3);
   padding-top: 5px;
   padding-left: 10px;
+  margin-right: 20px;
 }
 
 .final-price span {
@@ -24,7 +25,10 @@
 .wrapper-rent {
   background-color: rgba( lightslategrey, 0.3);
   padding: 13px;
+  padding-left: none;
   border-radius: 3px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .control-label {
@@ -32,4 +36,25 @@
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 500;
+}
+
+.btn-primary {
+  text-align: center;
+}
+
+.description {
+  padding: 13px;
+  border-radius: 1px;
+}
+
+h2 {
+  margin-top: 0px;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+
+p {
+  font-variant: small-caps;
+  margin-bottom: 0px;
+  font-size: 20px;
 }

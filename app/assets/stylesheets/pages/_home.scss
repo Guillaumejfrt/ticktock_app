@@ -1,52 +1,35 @@
 /* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
-
-.banner {
+* CSS code specific to home page
+* (margin/padding adjustments)
+* ------------------------------------- */
+.banner-bg-home {
   background-image: image-url("index.jpg");
   background-size: cover;
-  padding-top: 30px;
-  padding-bottom: 0px;
-  margin-bottom:0;
-  text-align: center;
-  padding-top: 150px;
-  padding-bottom: 70px;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-attachment:fixed;
+  padding-top: 240px;
+  padding-bottom: 200px;
 }
-
-
-.banner h1 {
-  font-size: 50px;
+.title {
+  color: black;
+  font-family: "Times New Roman"serif;
+  margin: 30px;
+  font-size: 24px;
+  letter-spacing: 0.2em;
   font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  color: white;
 }
-.banner p {
+.catch {
   font-size: 18px;
   font-weight: lighter;
   color: black;
   font-style: italic;
   font-family: "Times New Roman", serif;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
-
-.title {
-  color: black;
-  padding-top: 30px;
-  font-family: "Times New Roman"serif;
-}
-
-.wrapper {
-  margin-top: 35px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 150px;
+.banner-content {
+  margin: auto;
   width: 460px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 15px;
-  padding-bottom: 30px;
+  padding-top: 5px;
+  padding-bottom: 20px;
   text-align: center;
   border-color: #bcbcbc;
   border-width: 1px;
@@ -55,7 +38,34 @@
   opacity: 0.9;
 }
 
-.wrapper h2 {
+.banner-bg-index {
+  background-image: image-url("rolex.jpg");
+  background-size: cover;
+  margin-top: 90px;
+  padding-bottom: 1px;
+  padding-top: 50px;
+}
+
+.wrapper-form {
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  width: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  // padding-bottom: 60px;
+  text-align: center;
+  border-color: #bcbcbc;
+  border-width: 1px;
+  border-style:solid;
+  background-color: white;
+  opacity: 0.95;
+  height: 430px;
+}
+
+.wrapper-form h2 {
   margin-top: 20px;
   margin-bottom: 30px;
   font-size: 22px;
@@ -63,10 +73,46 @@
   font-weight: bold;
 }
 
-.wrapper a {
+.wrapper-form a {
   padding: 10px;
   margin-top: 10px;
 }
 
+.banner-bg-index {
+  background-image: image-url("rolex-ok.jpg");
+  background-size: cover;
+  // background-position: center;
+  // background-attachment:fixed;
+  padding: none;
+  background-position: center;
+}
 
+.form-inputs {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 20px;
+}
 
+.form-group.email.optional.user_email {
+  margin-bottom: 30px;
+
+}
+
+.control-label.password.optional {
+
+}
+
+.form-actions {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #ccb94d;
+  text-decoration: none;
+}

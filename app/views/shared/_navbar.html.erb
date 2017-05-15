@@ -61,10 +61,14 @@
   </div>
   <% else %>
   <div class="navbar-wagon-right">
+    <!-- Show (all watches) text link -->
+    <%= link_to "ALL WATCHES", watches_path, class: "navbar-all-watches" %>
+    <div class="separator"></div>
+
     <!-- Sign-up text link -->
-    <%= link_to t(".sign_up", default: "Signup"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to t(".sign_up", default: "Signup"), new_user_registration_path, class: "navbar-signup" %>
     <!-- Login text link -->
-    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-login" %>
     <% end %>
   </div>
 </div>

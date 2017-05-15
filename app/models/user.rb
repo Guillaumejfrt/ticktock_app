@@ -17,6 +17,7 @@
 #  updated_at             :datetime         not null
 #  first_name             :string
 #  last_name              :string
+
 #  provider               :string
 #  uid                    :string
 #  facebook_picture_url   :string

@@ -15,8 +15,11 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
-#  first_name             :string
-#  last_name              :string
+
+
+#  first_name             :string           default("")
+#  last_name              :string           default("")
+
 #
 # Indexes
 #
@@ -27,10 +30,19 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  before_save :normalize_name, on: :update
+
   has_many :watches
   has_many :rentals
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   has_attachment :photo
+
+  private
+
+  def normalize_name
+    first_name.capitalize!
+    last_name.capitalize!
+  end
 end

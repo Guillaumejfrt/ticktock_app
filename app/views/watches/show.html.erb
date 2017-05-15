@@ -3,7 +3,9 @@
     <div class="col-md-9 col-xs-12">
     <div>
       <% @watch.photos.each do |photo| %>
+      <div>
         <%= cl_image_tag photo.path, width: 300, height: 300, crop: :fill %>
+      </div>
       <% end %>
     </div>
       <div>

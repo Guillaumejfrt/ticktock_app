@@ -5,8 +5,9 @@
 .banner-bg-home {
   background-image: image-url("index.jpg");
   background-size: cover;
-  padding: 200px;
-  // background-attachment:fixed
+  background-attachment:fixed;
+  padding-top: 240px;
+  padding-bottom: 200px;
 }
 .title {
   color: black;
@@ -28,6 +29,7 @@
   margin: auto;
   width: 460px;
   padding-top: 5px;
+  padding-bottom: 50px;
   text-align: center;
   border-color: #bcbcbc;
   border-width: 1px;

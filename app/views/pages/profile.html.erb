@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <div>
+        <% if @user.photo? %>
+            <%= cl_image_tag(@user.photo.path, :transformation=>[
+              {:gravity=>"face", :radius=>"max"},
+              {:width=>100,:crop=>"scale"}]
+            ) %>
+        <% end %>
+      </div>
+      <div>
+        <p>Firstname: <%= @user.first_name %></p>
+        <p>Last name: <%= @user.last_name %></p>
+        <p>Watches: <%= @user.watches.count %></p>
+        <div>
+          <p>Link: <strong>Go to my dashboard</strong></p>
+          <!-- <p><%#= link_to "Go to my dashboard", pages#dashboard %></p> -->
+        </div>
+      </div>
+      <div>
+        <%= link_to "Edit my profile", profile_edit_path %>
+      </div>
+    </div>
+  </div>
+</div>

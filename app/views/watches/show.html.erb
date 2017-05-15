@@ -1,20 +1,31 @@
 <div class="container">
   <div class="row">
     <div class="col-md-9 col-xs-12">
-    <div>
-      <% @watch.photos.each do |photo| %>
-      <div>
-        <% if photo %>
-          <%= cl_image_tag photo.path, width: 300, height: 300, crop: :fill %>
-        <% end %>
+      <div class="row">
+        <div class="col-xs-9">
+          <h2><%= @watch.brand %></h2>
+          <p><%= @watch.gender %></p>
+          <p><%= @watch.mechanism %></p>
+          <p><%= @watch.description %></p>
+        </div>
+        <div class="col-xs-3">
+          <% if @watch.user.photo? %>
+              <%= cl_image_tag(@watch.user.photo.path, :transformation=>[
+                {:gravity=>"face", :radius=>"max"},
+                {:width=>50,:crop=>"scale"}]
+              ) %>
+          <% end %>
+          <p><%= @watch.user.first_name %></p>
+        </div>
       </div>
-      <% end %>
-    </div>
-      <div>
-        <h2><%= @watch.brand %></h2>
-        <p><%= @watch.gender %></p>
-        <p><%= @watch.mechanism %></p>
-        <p><%= @watch.description %></p>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2" >
+          <% @watch.photos.each do |photo| %>
+          <div>
+            <%= cl_image_tag photo.path, width: 400, height: 400, crop: :fill %>
+          </div>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="col-md-3 col-xs-12">

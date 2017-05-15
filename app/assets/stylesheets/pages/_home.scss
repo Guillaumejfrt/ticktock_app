@@ -49,9 +49,9 @@
 #aaw {
   background-image: image-url("add-a-watch-bg.jpg");
   background-size: cover;
-  margin-top: 90px;
-  padding-bottom: 1px;
-  padding-top: 50px;
+  background-attachment:fixed;
+  padding-top: 144px;
+  padding-bottom: 90px;
 }
 
 #aaw h1 {
@@ -64,11 +64,26 @@
   font-weight: bold;
 }
 
-#wfaaw {
-  padding-bottom: 120px;
+
+
+.wrapper-form-new {
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  width: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  // padding-bottom: 60px;
+  text-align: center;
+  border-color: #bcbcbc;
+  border-width: 1px;
+  border-style:solid;
+  background-color: white;
+  opacity: 0.95;
+  height: 726px;
 }
-
-
 
 .wrapper-form {
   margin-top: auto;

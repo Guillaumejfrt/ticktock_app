@@ -21,11 +21,19 @@
     </div> -->
     <%# end %>
     <!-- Profile picture and dropdown -->
+<<<<<<< HEAD
     <div class="navbar-signup">
       <div class="dropdown" id="text">
         My Profile
         <%= image_tag "http://placehold.it/30x30", id:
         "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+=======
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+
+        <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+        <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+>>>>>>> 15a7da9346ff157c6ae2722a6b213fbb530d3eb3
 
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>

@@ -16,6 +16,7 @@ gem 'font-awesome-sass'
 gem 'simple_form', github: 'elsurudo/simple_form', branch: 'rails-5.1.0'
 gem 'autoprefixer-rails'
 gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
+gem 'omniauth-facebook'
 gem 'erubis'
 gem 'annotate'
 

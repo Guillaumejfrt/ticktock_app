@@ -4,7 +4,9 @@
     <div>
       <% @watch.photos.each do |photo| %>
       <div>
-        <%= cl_image_tag photo.path, width: 300, height: 300, crop: :fill %>
+        <% if photo %>
+          <%= cl_image_tag photo.path, width: 300, height: 300, crop: :fill %>
+        <% end %>
       </div>
       <% end %>
     </div>

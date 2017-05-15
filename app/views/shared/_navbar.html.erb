@@ -26,10 +26,10 @@
         <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>
-            <%= link_to "Profile", pages_profile_path %>
+            <%= link_to "Profile", profile_path %>
           </li>
           <li>
-            <%= link_to "Dashboard", pages_dashboard_path %>
+            <%= link_to "Dashboard", dashboard_path %>
           </li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
@@ -48,10 +48,10 @@
           <%= link_to "Add a watch", new_watch_path %>
         </li>
         <li>
-          <%= link_to "Profile", pages_profile_path %>
+          <%= link_to "Profile", profile_path %>
         </li>
         <li>
-          <%= link_to "Dashboard", pages_dashboard_path %>
+          <%= link_to "Dashboard", dashboard_path %>
         </li>
         <li>
           <%= link_to "Log out", destroy_user_session_path, method: :delete%>

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user = User.update(user_params)
-      redirect_to pages_profile_path
+      redirect_to profile_path
     else
       render 'pages/edit_profile'
     end

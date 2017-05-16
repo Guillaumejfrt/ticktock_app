@@ -1,9 +1,9 @@
-<div class="container-rent">
-<div class="wrapper-rent">
-<%= simple_form_for [ @watch, @rental ] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "RENT", class: "btn btn-primary btn-lg btn-block" %>
-<% end %>
-</div>
+<div class="container">
+  <div class="row">
+    <%= simple_form_for [ @watch, @rental ] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.submit "RENT", class: "btn btn-primary btn-lg btn-block" %>
+    <% end %>
+  </div>
 </div>

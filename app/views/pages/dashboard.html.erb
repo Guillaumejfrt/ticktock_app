@@ -18,7 +18,7 @@
               <% end %>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="col-xs-12 col-sm-6 col-md-5">
             <div class="text-center-xs">
               <h5>Brand: <strong><%= watch.brand %></strong></h5>
               <p>Gender: <%= watch.gender %></p>
@@ -26,7 +26,7 @@
               <p>Description: <%= watch.description %></p>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="text-center-xs">
               <%= link_to "Edit watch", edit_watch_path(watch) %>
               <%= link_to "Delete watch", watch_path(watch), method: "delete" %>
@@ -42,43 +42,40 @@
           <em><h4>My rentals:</h4></em>
           <% @user.rentals.each do |rental| %>
             <div class="row">
-              <div class="col-xs-1">
-                <% if rental.watch.photos %>
-                  <%= cl_image_tag rental.watch.photos.first.path, width: 100, height: 100, crop: :fill %>
-                <% else %>
-                  <% image_tag "http://placehold.it/30x30"  %>
-                <% end %>
-              </div>
-              <div class="col-xs-4">
-                <p><strong><%= rental.watch.brand %></strong></p>
-                <p><%= rental.watch.gender %></p>
-                <p><%= rental.watch.mechanism %></p>
-              </div>
-              <div class="col-xs-6">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="row">
-                      <div class="col-xs-4">
-                        <h5>Rental details</h5>
-                        <p><strong><%= rental.rent_price %>€</p></strong>
-                      </div>
-                      <div class="col-xs-2">
-                        <% if rental.user.photo %>
-                          <%= cl_image_tag(rental.user.photo.path, width: 50, height: 50, crop: :thumb, gravity: :face, radius: :max) %>
-                        <% end %>
-                        <% if rental.user.first_name.present? %>
-                          <p><%= rental.user.first_name %></p>
-                        <% end %>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-12">
-                        <p><%= rental.start_date %></p>
-                        <p><%= rental.end_date %></p>
-                      </div>
-                    </div>
-                  </div>
+              <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                <div class="text-center-xs">
+                  <% if rental.watch.photos %>
+                    <%= cl_image_tag rental.watch.photos.first.path, width: 230, height: 230, crop: :fill %>
+                  <% else %>
+                    <% image_tag "http://placehold.it/30x30"  %>
+                  <% end %>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-8 col-md-9 col-lg-5">
+                <div class="text-center-xs">
+                  <p>Brand: <strong><%= rental.watch.brand %></strong></p>
+                  <p>Gender: <%= rental.watch.gender %></p>
+                  <p>Mechanism: <%= rental.watch.mechanism %></p>
+                  <p>Description: <%= rental.watch.description %></p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-lg-4">
+                <h5>Rental details</h5>
+                <p>
+                  Owner: <% if rental.user.first_name.present? %>
+                          <p><%= rental.user.first_name %></p>
+                         <% end %>
+                  <% if rental.user.photo %>
+                    <%= cl_image_tag(rental.user.photo.path, width: 50,
+                                                             height: 50,
+                                                             crop: :thumb,
+                                                             gravity: :face,
+                                                             radius: :max) %>
+                  <% end %>
+                </p>
+                <p>Start date: <%= rental.start_date.strftime("%A %d %B %Y at %I:%M") %></p>
+                <p>End date: <%= rental.end_date.strftime("%A %d %B %Y at %I:%M") %></p>
+                <p>Total price: <strong><%= rental.rent_price %>€</p></strong>
               </div>
             </div>
           <% end %>

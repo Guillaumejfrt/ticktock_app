@@ -1,19 +1,25 @@
 <div class="container">
   <div class="row">
-    <h2><%= @watch.brand %></h2>
-    <p><%= @watch.gender %></p>
-    <p><%= @watch.mechanism %></p>
-    <% if @watch.user.photo? %>
-      <%= cl_image_tag(@watch.user.photo.path, gravity: :face,
-                                               width: 50,
-                                               crop: :fill,
-                                               radius: :max) %>
-    <% end %>
-    <p><%= @watch.user.first_name %></p>
-    <% @watch.photos.each do |photo| %>
-      <%= cl_image_tag photo.path, width: 400, height: 400, crop: :fill %>
-    <% end %>
-    <h3><%= @watch.price %>€</h3><span>/hour</span>
-    <%= render "rentals/rental_form" %>
+    <div class="col-xs-12">
+      <div class="text-center">
+        <h2><%= @watch.brand %></h2>
+        <p><%= @watch.gender %></p>
+        <p><%= @watch.mechanism %></p>
+        <% if @watch.user.photo? %>
+        <%= cl_image_tag(@watch.user.photo.path, gravity: :face,
+        width: 50,
+        crop: :fill,
+        radius: :max) %>
+        <% end %>
+        <p><%= @watch.user.first_name %></p>
+        <% @watch.photos.each do |photo| %>
+        <%= cl_image_tag photo.path, width: 400, height: 400, crop: :fill %>
+        <% end %>
+        <div class="row">
+          <h3><%= @watch.price %>€</h3><span>/hour</span>
+          <%= render "rentals/rental_form" %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

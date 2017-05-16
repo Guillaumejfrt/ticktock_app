@@ -17,6 +17,17 @@
 #  updated_at             :datetime         not null
 #  first_name             :string
 #  last_name              :string
+#  provider               :string
+#  uid                    :string
+#  facebook_picture_url   :string
+#  token                  :string
+#  token_expiry           :datetime
+#
+# Indexes
+#
+#  index_users_on_email                 (email) UNIQUE
+#  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#
 
 #  provider               :string
 #  uid                    :string

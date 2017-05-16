@@ -1,27 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-6">
-      <div>
-        <% if @user.photo %>
-            <%= cl_image_tag(@user.photo.path, gravity: :face,
-                                               width: 100,
-                                               height: 100,
-                                               crop: "fill",
-                                               radius: :max) %>
-        <% end %>
-      </div>
-      <div>
-        <p>Firstname: <%= @user.first_name %></p>
-        <p>Last name: <%= @user.last_name %></p>
-        <p>Watches: <%= @user.watches.count %></p>
-        <div>
-          <p>Link: <strong>Go to my dashboard</strong></p>
-          <!-- <p><%#= link_to "Go to my dashboard", pages#dashboard %></p> -->
-        </div>
-      </div>
-      <div>
-        <%= link_to "Edit my profile", profile_edit_path %>
-      </div>
-    </div>
+    <% if @user.photo %>
+      <%= cl_image_tag(@user.photo.path, gravity: :face,
+                                         width: 100,
+                                         height: 100,
+                                         crop: "fill",
+                                         radius: :max) %>
+    <% end %>
+    <p>Firstname: <%= @user.first_name %></p>
+    <p>Last name: <%= @user.last_name %></p>
+    <p>Watches: <%= @user.watches.count %></p>
+    <%= link_to "Edit my profile", profile_edit_path %>
   </div>
 </div>

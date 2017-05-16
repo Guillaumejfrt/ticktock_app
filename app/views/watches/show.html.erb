@@ -12,10 +12,10 @@
         </div>
         <div class="col-xs-3">
           <% if @watch.user.photo? %>
-              <%= cl_image_tag(@watch.user.photo.path, :transformation=>[
-                {:gravity=>"face", :radius=>"max"},
-                {:width=>50,:crop=>"scale"}]
-              ) %>
+              <%= cl_image_tag(@watch.user.photo.path, gravity: :face,
+                                                       width: 50,
+                                                       crop: :fill,
+                                                       radius: :max) %>
           <% end %>
           <p><%= @watch.user.first_name %></p>
         </div>

@@ -49,16 +49,21 @@
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="row">
-              <div class="col-xs-4">
-                <p><strong><%= rental.rent_price %>€</p></strong>
+              <div class="row">
+                <h5>Rental details</h5>
               </div>
-              <div class="col-xs-2">
-                <% if rental.user.photo %>
-                  <%= cl_image_tag(rental.user.photo.path, width: 50, height: 50, crop: :thumb, gravity: :face, radius: :max) %>
-                <% end %>
-                <% if rental.user.first_name.present? %>
-                  <p><%= rental.user.first_name %></p>
-                <% end %>
+              <div class="row">
+                <div class="col-xs-4">
+                  <p><strong><%= rental.rent_price %>€</p></strong>
+                </div>
+                <div class="col-xs-2">
+                  <% if rental.user.photo %>
+                    <%= cl_image_tag(rental.user.photo.path, width: 50, height: 50, crop: :thumb, gravity: :face, radius: :max) %>
+                  <% end %>
+                  <% if rental.user.first_name.present? %>
+                    <p><%= rental.user.first_name %></p>
+                  <% end %>
+                </div>
               </div>
             </div>
             <div class="row">

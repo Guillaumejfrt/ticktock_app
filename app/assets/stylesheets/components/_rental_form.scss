@@ -1,11 +1,3 @@
-.col-xs-9 {
-  margin-left: 104px;
-}
-
-.col-xs-8 {
-  border-radius: 1px;
-}
-
 .form-inline {
   padding: 5px;
   background-color: none;
@@ -36,7 +28,7 @@
   padding-left: none;
   border-radius: 3px;
   margin-right: 20px;
-  margin-bottom: 10px;
+
 }
 
 .control-label {
@@ -46,13 +38,15 @@
   font-weight: 500;
 }
 
-.btn-primary {
-  text: center;
+img {
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-.description {
-  padding: 13px;
-  border-radius: 1px;
+.description p {
+  font-variant: small-caps;
+  margin-bottom: 0px;
+  font-size: 15px;
 }
 
 .p-description {
@@ -67,12 +61,12 @@ h2 {
   text-transform: uppercase;
 }
 
-p {
-  font-variant: small-caps;
-  margin-bottom: 0px;
-}
-
 .container {
   margin: 90px;
 }
 
+.user p {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-weight: bold;
+}

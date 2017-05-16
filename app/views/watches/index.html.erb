@@ -1,7 +1,3 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <div class="text-center">
         <h1>Un évènement important, une montre de choix</h1>
         <% @watches.each do |watch|  %>
         <% if watch.photos.first %>
@@ -11,7 +7,3 @@
         <p><%= watch.mechanism %></p>
         <p><%= watch.price %>€</p>
         <% end %>
-      </div>
-    </div>
-  </div>
-</div>

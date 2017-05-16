@@ -21,6 +21,9 @@
   text-transform: uppercase;
   font-size: 15px;
 }
+.rental_form {
+
+}
 
 .wrapper-rent {
   background-color: rgba( lightslategrey, 0.3);
@@ -28,8 +31,7 @@
   padding-left: none;
   border-radius: 3px;
   margin-right: 20px;
-  margin-bottom: 10px;
-  height: 394px;
+
 }
 
 .control-label {
@@ -41,6 +43,7 @@
 
 img {
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .description p {
@@ -65,3 +68,8 @@ h2 {
   margin: 90px;
 }
 
+.user p {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-weight: bold;
+}

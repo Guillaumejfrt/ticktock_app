@@ -116,3 +116,34 @@ a:hover {
   color: #ccb94d;
   text-decoration: none;
 }
+
+.row {
+  padding-left: 20px;
+  text-align: center;
+}
+
+// .row p {
+//   margin-top: 30px;
+// }
+
+.first {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.last {
+  padding-bottom: 20px;
+  font-size: 28px;
+}
+
+.watches {
+  padding:20px;
+  border-color: #bcbcbc;
+  border-width: 1px;
+  border-style:solid;
+  background-color: white;
+  opacity: 0.95;
+  font-size: 28px;
+  color: #E09C09;
+
+}

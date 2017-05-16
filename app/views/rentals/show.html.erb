@@ -1,18 +1,12 @@
-<div class="container text-center">
+<div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <div>
-        <h2>Congratulations! You have rent a wonderfull watch:</h2>
-        <hr>
-        <h3><%= @watch.brand %></h3>
-        <p><%= @watch.mechanism %></p>
-        <p><%= @watch.description %></p>
-        <hr>
-        <h4><strong>Your rentals details</strong></h4>
-        <p><%= @rental.start_date %></p>
-        <p><%= @rental.end_date %></p>
-        <p><%= @rental.rent_price %>€</p>
-      </div>
-    </div>
+    <h2>Congratulations! You have rent a wonderfull watch:</h2>
+    <h3><%= @watch.brand %></h3>
+    <p><%= @watch.mechanism %></p>
+    <p><%= @watch.description %></p>
+    <h4><strong>Your rentals details</strong></h4>
+    <p><%= @rental.start_date %></p>
+    <p><%= @rental.end_date %></p>
+    <p><%= @rental.rent_price %>€</p>
   </div>
 </div>

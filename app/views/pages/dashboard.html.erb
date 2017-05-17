@@ -60,22 +60,24 @@
                 </div>
               </div>
               <div class="col-xs-12 col-lg-4">
-                <p><strong>Rental details</strong></p>
-                <p>
-                  Owner: <% if rental.user.first_name.present? %>
-                          <p><%= rental.user.first_name %></p>
-                         <% end %>
-                  <% if rental.user.photo %>
-                    <%= cl_image_tag(rental.user.photo.path, width: 50,
-                                                             height: 50,
-                                                             crop: :thumb,
-                                                             gravity: :face,
-                                                             radius: :max) %>
-                  <% end %>
-                </p>
-                <p>Start date: <%= rental.start_date.strftime("%A %d %B %Y at %I:%M") %></p>
-                <p>End date: <%= rental.end_date.strftime("%A %d %B %Y at %I:%M") %></p>
-                <p>Total price: <strong><%= rental.rent_price %>€</p></strong>
+                <div class="text-center-xs">
+                  <p><strong>Rental details</strong></p>
+                  <p>
+                    Owner: <% if rental.user.first_name.present? %>
+                            <p><%= rental.user.first_name %></p>
+                           <% end %>
+                    <% if rental.user.photo %>
+                      <%= cl_image_tag(rental.user.photo.path, width: 50,
+                                                               height: 50,
+                                                               crop: :thumb,
+                                                               gravity: :face,
+                                                               radius: :max) %>
+                    <% end %>
+                  </p>
+                  <p>Start date: <%= rental.start_date.strftime("%A %d %B %Y at %I:%M") %></p>
+                  <p>End date: <%= rental.end_date.strftime("%A %d %B %Y at %I:%M") %></p>
+                  <p>Total price: <strong><%= rental.rent_price %>€</p></strong>
+                </div>
               </div>
             </div>
           <% end %>

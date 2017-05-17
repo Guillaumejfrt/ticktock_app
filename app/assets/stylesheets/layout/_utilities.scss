@@ -167,14 +167,20 @@ font-size: 28px;
 letter-spacing: 0.2em;
 color: #C48908;
 }
-.wrapper-mg-top {
+.wrapper-mg-top-bot {
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .btn-success {
   background-color: white;
   color: #B7B7B1;
   border-color: #B7B7B1;
+}
+
+.btn-delete {
+  background-color: white;
+  color: red;
 }
 
 .btn-success:hover {

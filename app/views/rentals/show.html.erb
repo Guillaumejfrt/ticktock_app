@@ -1,15 +1,17 @@
-<div class="container">
+<div class="container" style="background-image: url(<%=image_path("wbg.jpg")%>);">>
   <div class="row">
-    <div class="col-xs-12">
-      <div class="text-center">
-        <h2>Congratulations! You have rent a wonderfull watch:</h2>
-        <h3><%= @watch.brand %></h3>
-        <p><%= @watch.mechanism %></p>
-        <p><%= @watch.description %></p>
-        <h4><strong>Your rentals details</strong></h4>
-        <p><%= @rental.start_date %></p>
-        <p><%= @rental.end_date %></p>
-        <p><%= @rental.rent_price %>€</p>
+    <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+      <div class="wrapper-white-signup">
+        <div class="text-center">
+          <h2>Congratulations! You have rent a wonderful watch</h2>
+          <h3><%= @watch.brand %></h3>
+          <p><%= @watch.mechanism %></p>
+          <p><%= @watch.description %></p>
+          <h4><strong>Your rentals details</strong></h4>
+          <p><%= @rental.start_date %></p>
+          <p><%= @rental.end_date %></p>
+          <p><%= @rental.rent_price %>€</p>
+        </div>
       </div>
     </div>
   </div>

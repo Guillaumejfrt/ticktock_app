@@ -13,7 +13,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-3" >
             <div class="text-center-xs">
-              <% if watch.photos.first.present? %>
+              <% if watch.photos %>
                 <%= cl_image_tag watch.photos.first.path, width: 230, height: 230, crop: :fill %>
               <% end %>
             </div>

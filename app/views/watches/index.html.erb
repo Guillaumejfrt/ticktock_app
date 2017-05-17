@@ -1,9 +1,19 @@
-        <h1>Un évènement important, une montre de choix</h1>
-        <% @watches.each do |watch|  %>
-        <% if watch.photos.first %>
-        <%= cl_image_tag watch.photos.first.path, width: 150, height: 200, crop: :fill %>
-        <% end %>
-        <h3><%= link_to watch.brand, watch_path(watch) %></h3>
-        <p><%= watch.mechanism %></p>
-        <p><%= watch.price %>€</p>
-        <% end %>
+  <h1>Un événement important, une montre de choix</h1>
+  <div class="row">
+    <% @watches.each do |watch|  %>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail watch_thumbnail">
+            <% if watch.photos.first %>
+              <%= cl_image_tag watch.photos.first.path, width: 150, height: 200, crop: :fill %>
+            <% end %>
+        <div class="caption">
+            <h3><%= watch.brand %></h3>
+            <p><%= watch.description %></p>
+            <p><%= watch.mechanism %></p>
+            <p><%= watch.price %>€/ heure</p>
+            <%= link_to "Try it on", watch_path(watch), class: "btn btn-primary", role: "button" %></p></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

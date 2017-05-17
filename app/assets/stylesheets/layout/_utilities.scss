@@ -25,6 +25,11 @@
   background: #3b5998;
 }
 
+.margin-bottom-wrapper {
+  margin-bottom: 35px;
+}
+
+
 // Toutes les classes pour gérer l'alignement de son texte en responsive
 
 .text-left-not-xs, .text-left-not-sm, .text-left-not-md, .text-left-not-lg {
@@ -173,4 +178,9 @@ color: #C48908;
   color: #B7B7B1;
   background-color: white;
   border-color: #c7ae42;
+}
+
+p {
+  font-variant: small-caps;
+  text-transform: lowercase;
 }

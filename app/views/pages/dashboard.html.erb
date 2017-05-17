@@ -27,11 +27,11 @@
                 <p>Description: <%= watch.description %></p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="text-center-xs text-center-sm div-height link-padded">
-                <%= link_to "Edit watch", edit_watch_path(watch) %>
-                <%= link_to "Delete watch", watch_path(watch), method: "delete" %>
-              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="text-center-xs text-center-sm div-height link-padded">
+              <%= link_to "Edit watch", edit_watch_path(watch), class:"btn-success" %>
+              <%= link_to "Delete watch", watch_path(watch), method: "delete", class:"btn-delete" %>
             </div>
           </div>
         </div>

@@ -11,19 +11,21 @@
       <em><h4>My watches:</h4></em>
       <% @user.watches.each do |watch| %>
         <div class="row">
-          <div class="col-xs-12 col-sm-4 col-md-3" >
-            <div class="text-center-xs">
-              <% if watch.photos %>
-                <%= cl_image_tag watch.photos.first.path, width: 230, height: 230, crop: :fill %>
-              <% end %>
+          <div class="mg-row">
+            <div class="col-xs-12 col-sm-4 col-md-3" >
+              <div class="text-center-xs">
+                <% if watch.photos %>
+                  <%= cl_image_tag watch.photos.first.path, width: 230, height: 230, crop: :fill %>
+                <% end %>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-5">
-            <div class="text-center-xs wrapper-beige div-height margin-xs">
-              <h5>Brand: <strong><%= watch.brand %></strong></h5>
-              <p>Gender: <%= watch.gender %></p>
-              <p>Mechanism: <%= watch.mechanism %></p>
-              <p>Description: <%= watch.description %></p>
+            <div class="col-xs-12 col-sm-6 col-md-5">
+              <div class="text-center-xs wrapper-beige div-height margin-xs">
+                <h5>Brand: <strong><%= watch.brand %></strong></h5>
+                <p>Gender: <%= watch.gender %></p>
+                <p>Mechanism: <%= watch.mechanism %></p>
+                <p>Description: <%= watch.description %></p>
+              </div>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4">
@@ -42,43 +44,45 @@
           <em><h4>My rentals:</h4></em>
           <% @user.rentals.each do |rental| %>
             <div class="row">
-              <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-                <div class="text-center-xs">
-                  <% if rental.watch.photos %>
-                    <%= cl_image_tag rental.watch.photos.first.path, width: 230,
-                                                                     height: 230,
-                                                                     crop: :fill %>
-                  <% else %>
-                    <% image_tag "http://placehold.it/30x30"  %>
-                  <% end %>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 col-lg-5">
-                <div class="text-center-xs div-height">
-                  <p>Brand: <strong><%= rental.watch.brand %></strong></p>
-                  <p>Gender: <%= rental.watch.gender %></p>
-                  <p>Mechanism: <%= rental.watch.mechanism %></p>
-                  <p>Description: <%= rental.watch.description %></p>
-                </div>
-              </div>
-              <div class="col-xs-12 col-lg-4">
-                <div class="text-center-xs">
-                  <p><strong>Rental details</strong></p>
-                  <p>
-                    Owner: <% if rental.user.first_name.present? %>
-                            <p><%= rental.user.first_name %></p>
-                           <% end %>
-                    <% if rental.user.photo %>
-                      <%= cl_image_tag(rental.user.photo.path, width: 50,
-                                                               height: 50,
-                                                               crop: :thumb,
-                                                               gravity: :face,
-                                                               radius: :max) %>
+              <div>
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                  <div class="text-center-xs">
+                    <% if rental.watch.photos %>
+                      <%= cl_image_tag rental.watch.photos.first.path, width: 230,
+                                                                       height: 230,
+                                                                       crop: :fill %>
+                    <% else %>
+                      <% image_tag "http://placehold.it/30x30"  %>
                     <% end %>
-                  </p>
-                  <p>Start date: <%= rental.start_date.strftime("%A %d %B %Y at %I:%M") %></p>
-                  <p>End date: <%= rental.end_date.strftime("%A %d %B %Y at %I:%M") %></p>
-                  <p>Total price: <strong><%= rental.rent_price %>€</p></strong>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9 col-lg-5">
+                  <div class="text-center-xs div-height">
+                    <p>Brand: <strong><%= rental.watch.brand %></strong></p>
+                    <p>Gender: <%= rental.watch.gender %></p>
+                    <p>Mechanism: <%= rental.watch.mechanism %></p>
+                    <p>Description: <%= rental.watch.description %></p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                  <div class="text-center-xs">
+                    <p><strong>Rental details</strong></p>
+                    <p>
+                      Owner: <% if rental.user.first_name.present? %>
+                              <p><%= rental.user.first_name %></p>
+                             <% end %>
+                      <% if rental.user.photo %>
+                        <%= cl_image_tag(rental.user.photo.path, width: 50,
+                                                                 height: 50,
+                                                                 crop: :thumb,
+                                                                 gravity: :face,
+                                                                 radius: :max) %>
+                      <% end %>
+                    </p>
+                    <p>Start date: <%= rental.start_date.strftime("%A %d %B %Y at %I:%M") %></p>
+                    <p>End date: <%= rental.end_date.strftime("%A %d %B %Y at %I:%M") %></p>
+                    <p>Total price: <strong><%= rental.rent_price %>€</p></strong>
+                  </div>
                 </div>
               </div>
             </div>

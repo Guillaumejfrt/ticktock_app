@@ -8,9 +8,11 @@
           <p><%= @watch.mechanism %></p>
           <p><%= @watch.description %></p>
           <h4><strong>Your rentals details</strong></h4>
-          <p><%= @rental.start_date %></p>
-          <p><%= @rental.end_date %></p>
-          <p><%= @rental.rent_price %>€</p>
+          <p><%= @rental.start_date.strftime("%A %d %B %Y at %I:%M") %></p>
+          <p><%= @rental.end_date.strftime("%A %d %B %Y at %I:%M") %></p>
+          <p><strong><%= @rental.rent_price %>€</p></strong>
+          <br>
+          <p><strong><em>Faustin is going to contact you straight away!</em></strong></p>
         </div>
       </div>
     </div>

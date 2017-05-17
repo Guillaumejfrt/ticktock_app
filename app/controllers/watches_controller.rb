@@ -28,7 +28,7 @@ class WatchesController < ApplicationController
 
   def update
     if @watch.update(watch_params)
-      redirect_to watch_path(@watch)
+      redirect_to dashboard_path
     else
       render :edit
     end

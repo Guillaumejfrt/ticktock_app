@@ -56,6 +56,9 @@
     .text-justify-xs {
         text-align: justify;
     }
+    .margin-xs {
+      margin: 10px 150px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .text-left-not-sm, .text-center-not-sm, .text-right-not-sm, .text-justify-not-sm {
@@ -127,8 +130,6 @@ font-size: 28px;
 letter-spacing: 0.2em;
 color: #C48908;
 }
-
-
 .wrapper-white {
 border-style: solid;
 border-width: 1px;

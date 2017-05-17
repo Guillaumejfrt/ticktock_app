@@ -1,16 +1,22 @@
-<%= simple_form_for ( @watch ) do |f| %>
-  <%= f.input :brand, collection: Watch::BRANDS  %>
-  <%= f.input :gender, collection: Watch::GENDERS %>
-  <%= f.input :mechanism, collection: Watch::MECHANISMS %>
-  <div class="form-group integer required watch_price">
-    <label class="control-label integer required" for="watch_price"><abbr title="required">*</abbr>
-      Price: €/hour
-    </label>
-    <input class="form-control numeric integer required" type="number" step="1" name="watch[price]" id="watch_price" />
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="text-center">
+          <%= simple_form_for ( @watch ) do |f| %>
+          <%= f.input :brand, collection: Watch::BRANDS  %>
+          <%= f.input :gender, collection: Watch::GENDERS %>
+          <%= f.input :mechanism, collection: Watch::MECHANISMS %>
+        <div class="form-group integer required watch_price">
+          <label class="control-label integer required" for="watch_price"><abbr title="required">*</abbr>
+          Price: €/hour
+          </label>
+          <input class="form-control numeric integer required" type="number" step="1" name="watch[price]" id="watch_price" />
+        </div>
+          <%= f.input :photos, as: :attachinary %>
+          <%= f.input :description %>
+          <%= f.submit "Go", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+     </div>
   </div>
-  <%= f.input :photos, as: :attachinary %>
-  <%= f.input :description %>
-  <%= f.submit "Go", class: "btn btn-primary" %>
-<% end %>
-
-
+</div>

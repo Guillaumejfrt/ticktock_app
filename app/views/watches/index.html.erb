@@ -3,7 +3,7 @@
   <div class="row">
     <% @watches.each do |watch|  %>
       <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail watch_thumbnail">
             <% if watch.photos.first %>
               <%= cl_image_tag watch.photos.first.path, width: 150, height: 200, crop: :fill %>
             <% end %>
@@ -12,7 +12,7 @@
             <p><%= watch.description %></p>
             <p><%= watch.mechanism %></p>
             <p><%= watch.price %>€/ heure</p>
-            <%= link_to "Try it on", "watch_path(watch)", class: "btn btn-primary", role: "button" %></p></div>
+            <%= link_to "Try it on", watch_path(watch), class: "btn btn-primary", role: "button" %></p></div>
         </div>
       </div>
     <% end %>

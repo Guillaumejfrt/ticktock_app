@@ -11,15 +11,13 @@
       <%= link_to "all watches", watches_path, class: "navbar-wagon-item navbar-wagon-link"  %>
 
       <!-- Sign up -->
-      <% if user_signed_in? %>
+      <% if !user_signed_in? %>
         <%= link_to "sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link"  %>
-        <% else "" %>
       <% end %>
 
       <!-- Login -->
-      <% if user_signed_in? %>
+      <% if !user_signed_in? %>
         <%= link_to "login", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link"  %>
-        <% else "" %>
       <% end %>
 
       <!-- Button (call-to-action) -->

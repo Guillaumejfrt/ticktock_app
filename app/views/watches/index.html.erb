@@ -1,13 +1,9 @@
-<div class="container">
-  <div class="row">
-    <h1>Un évènement important, une montre de choix</h1>
-    <% @watches.each do |watch|  %>
+        <h1>Un évènement important, une montre de choix</h1>
+        <% @watches.each do |watch|  %>
         <% if watch.photos.first %>
-          <%= cl_image_tag watch.photos.first.path, width: 150, height: 200, crop: :fill %>
+        <%= cl_image_tag watch.photos.first.path, width: 150, height: 200, crop: :fill %>
         <% end %>
         <h3><%= link_to watch.brand, watch_path(watch) %></h3>
         <p><%= watch.mechanism %></p>
         <p><%= watch.price %>€</p>
-    <% end %>
-  </div>
-</div>
+        <% end %>
